@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div id="main">
+
+   <div id="page1">
+    <header>
+      <h1>Smart Travel Planner</h1>
+      <nav>
+        <a href="#">Home</a> 
+        <a href="#">About</a> 
+        <a href="#">Contact</a>
+      </nav>
+    </header>
+  
+    <section >
+      <div id="formtop">
+        <h2>Trip Details</h2>
+      </div>
+      <form>
+        <div>
+          <label for="destination">Destination:</label>
+          <input type="text" id="destination" required name="destination" required>
+          <label for="travel-dates">Travel Dates:</label>
+          <input type="date" id="travel-dates" name="travel-dates" required>  
+        </div>
+       
+        <div>
+        <label for="Start_Date" >Start Date:</label>
+        <input type="date" id="Start_Date" required name="date">
+        <label for="EDate">End Date:</label>
+        <input type="date" id="EDate" required name="Edate">
+        </div>
+        
+        <div>
+          <label for="preferences">Preferences:</label>
+          <select id="preferences" name="preferences">
+            <option value="beach">Beach</option>
+            <option value="mountains">Mountains</option>
+            <option value="city">City</option>
+          </select>
+          
+          <label for="Trip_type">Trip Type:</label>
+          <select id="Trip_type" name="Trip_type">
+            <option value="family_Trip">Family Trip</option>
+            <option value="Boys_trip">Boys Trip</option>
+            <option value="girls_Trip">Girls Trip</option>
+            <option value="Bachelor_trip">Bachelor's Trip</option>
+          </select>
+          <button>Submit</button>
+        </div> 
+      </form>
+    </section>
+
+   </div>
+  
+    <div id="page2">
+      <section >
+        <div id="sectiontop">
+          <h2>User Profile</h2>
+        </div>
+        <div id="profilepage"> 
+          <div id="profile">
+            <div id="profile_dets1">  
+               <div id="imgtag"><img src="data:image/jpeg;base64,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" alt="Profile Picture" width="100" height="100"></div> 
+            </div>
+             <div id="profile_dets2">
+              <div id="para">
+                  <p><h4>Name :</h4> Amal Kumar</p>
+              </div>
+              <div id="para">
+                <p><h4>EMAIL:</h4>amalk@maqsoftware.com</p>
+              </div>
+              <div id="para">
+                <p><h4>AGE:</h4> 22</p>
+              </div>
+              <div id="para">
+                <p><h4>Destination Preference :</h4> Mountain</p>
+              </div>
+              <div id="para">
+                <p><h4>Trip Type :</h4> Bachelor Trip</p>
+              </div>
+                <a href="#">Travel History</a>
+             </div>  
+          </div>
+        </div>
+    </section>
+    </div>
+   
+      
+      
+  <div id="page3">
+    <section>
+      <div id="summarypagetop">
+        <h2>Summary</h2>
+      </div>
+      <div id="summarypage">
+        
+        <div id="para">
+          <p><h4>Trip Cost : </h4> &#8377;5000</p>
+        </div>
+        <div id="para">
+          <p><h4>Number of Stops : </h4> 5</p>
+        </div>
+        <div id="para">
+          <p><h4>Extra Places Visited : </h4> 4</p>
+        </div>
+        <div id="para">
+          <p><h4>Meals : </h4> 6</p>
+        </div>
+        <div id="para">
+          <p><h4>Overview : </h4> {To be updated later}</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+
+  <footer>
+    <p> &copy; Smart Travel Planner 2025-2025. All rights reserved </p>
+  </footer>
+  
+  </div>
+  <script src="validation.js"></script>
+
+</html>

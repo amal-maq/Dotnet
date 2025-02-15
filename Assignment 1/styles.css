@@ -1,0 +1,253 @@
+* {
+    box-sizing: border-box;
+    border: none;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    background-color: rgba(255, 250, 205, 0.183);
+}
+#main {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-rows: 1fr 1fr .9fr;
+}
+section {
+    display: flex;
+    justify-items: center;
+    flex-direction: column;
+}
+
+header {
+    height: 13vh;
+    background-color: #223843;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2vh;
+}
+
+header h1 {
+    color: #FFFF;
+    margin-left: 1vw;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3vw;
+    margin-right: 3vw;
+}
+
+nav a {
+    color: #FFFF;
+}
+
+a {
+    text-decoration: none;
+    color: #003d5b;
+}
+
+#formtop{
+    background-color: #003d5b;
+    width: 100%;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    justify-items: center;
+}
+
+section:nth-of-type(1) {
+    margin: 10vw 10vw 10vw 10vw;
+}
+
+section:nth-of-type(1) h2 {
+    color: #d1495b;
+}
+
+section:nth-of-type(1) input {
+    border: 1px solid #00798c;
+}
+
+section:nth-of-type(1) form {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: start;
+    position: relative;
+    padding-bottom: 5vw;
+    flex-wrap: wrap;
+    gap: 4vw;
+    background-color: rgba(255, 250, 205, 0.402);
+    box-shadow: 8px 6px 10px rgba(0, 0, 0, 0.3);
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    padding: 4vw 4vw 4vw 4vw;
+}
+
+section:nth-of-type(1) button {
+    height: 5vh;
+    width: 7vw;
+    color: white;
+    border-radius: 5%;
+    background-color: #30638e;
+    margin-left: 3vw;
+}
+
+select {
+    border: 1px solid #00798c;
+}
+
+#page2 section #profile {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20vw;
+}
+
+#page2 section {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+#sectiontop{
+    width: 100%;
+    justify-items: center;
+    background-color: #003d5b;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+#profilepage {
+    padding-top: 5vh;
+    height: 50vh;
+    width: 100%;
+    background-color: rgba(255, 250, 205, 0.402);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    box-shadow: 8px 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+#page2 section h2 {
+    color: #d1495b;
+}
+
+#page2 section #profile_dets2 {
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+}
+
+#page2 section img {
+   border-radius: 50%;
+   scale: 1.5;
+   
+}
+#page3 {
+    height: 45vh;
+    margin-top: -16vh;
+}
+
+#para {
+    display: flex;
+    align-items: center;
+}
+
+#para h4 {
+    color: #003d5b;
+}
+
+nav a:hover {
+    color: #edae49;
+}
+
+footer {
+    color: whitesmoke;
+    background-color: #223843;
+    justify-items: center;
+}
+
+#summarypage {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 4vh;
+    height: 50vh;
+    width: 100%;
+    padding-top: 5vh;
+    background-color: rgba(255, 250, 205, 0.402);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    box-shadow: 8px 6px 10px rgba(0, 0, 0, 0.3); 
+}
+#summarypagetop{
+    justify-items: center;
+    width: 100%;
+    background-color: #003d5b;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+#page2 a {
+    transition: ease-in-out;
+    transition-duration: 1s;
+}
+#page2 a:hover {
+    transform: translateY(-18%);
+    color: #30638e;
+}
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        height: auto;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 2vh;
+        margin-right: 0;
+    }
+
+    section:nth-of-type(1) {
+        margin: 5vw;
+    }
+
+    section:nth-of-type(1) form {
+        padding: 2vw;
+        gap: 2vw;
+    }
+
+    section:nth-of-type(1) button {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    #page2 section #profile {
+        flex-direction: column;
+        gap: 5vw;
+    }
+    #profilepage #imgtag img{
+        scale:0.9;
+    }
+    #profilepage{
+        height: 100%;
+        padding:2vw;
+    }
+    #page3 {
+        margin-top: 0;
+    }
+
+    #summarypage {
+        padding: 2vw;
+        height: 100%;
+    }
+}
