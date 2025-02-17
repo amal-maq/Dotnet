@@ -163,3 +163,4 @@ C:\Users\AmalKumarMAQSoftware\Desktop\Test\Assignment 1\TripAPI\obj\Debug\net9.0
 C:\Users\AmalKumarMAQSoftware\Desktop\Test\Assignment 1\TripAPI\obj\Debug\net9.0\TripAPI.pdb
 C:\Users\AmalKumarMAQSoftware\Desktop\Test\Assignment 1\TripAPI\obj\Debug\net9.0\TripAPI.genruntimeconfig.cache
 C:\Users\AmalKumarMAQSoftware\Desktop\Test\Assignment 1\TripAPI\obj\Debug\net9.0\ref\TripAPI.dll
+C:\Users\AmalKumarMAQSoftware\Desktop\Test\Assignment 1\TripAPI\obj\Debug\net9.0\TripAPI.sourcelink.json

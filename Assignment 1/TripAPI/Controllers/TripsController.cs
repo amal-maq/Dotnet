@@ -11,7 +11,6 @@ namespace TripAPI.Controllers
     {
         private readonly TripContext _context;
 
-        // Constructor to inject TripContext
         public TripsController(TripContext context)
         {
             _context = context;
@@ -21,19 +20,18 @@ namespace TripAPI.Controllers
         [HttpGet]
         public async Task<IActionResult> GetTrips()
         {
-            var trips = await _context.Trips.ToListAsync(); // Get all trips from the database
-            return Ok(trips); // Return the list of trips
+            var trips = await _context.Trips.ToListAsync(); 
+            return Ok(trips); 
         }
 
         // GET: api/trips/{id}
         [HttpGet("{id}")]
         public async Task<IActionResult> GetTrip(int id)
         {
-            var trip = await _context.Trips.FindAsync(id); // Find trip by ID
+            var trip = await _context.Trips.FindAsync(id); 
             if (trip == null)
-                return NotFound(); // Return 404 if trip not found
-
-            return Ok(trip); // Return the trip data
+                return NotFound(); 
+            return Ok(trip); 
         }
 
         // POST: api/trips
@@ -41,12 +39,11 @@ namespace TripAPI.Controllers
         public async Task<IActionResult> AddTrip([FromBody] Trip trip)
         {
             if (trip == null)
-                return BadRequest("Trip data is required."); // Return 400 if trip data is missing
+                return BadRequest("Trip data is required."); 
 
-            _context.Trips.Add(trip); // Add the new trip to the DbSet
-            await _context.SaveChangesAsync(); // Save changes to the database
-
-            return CreatedAtAction(nameof(GetTrip), new { id = trip.Id }, trip); // Return the created trip with status code 201
+            _context.Trips.Add(trip); 
+            await _context.SaveChangesAsync();
+            return CreatedAtAction(nameof(GetTrip), new { id = trip.Id }, trip); 
         }
 
         // PUT: api/trips/{id}
@@ -54,41 +51,40 @@ namespace TripAPI.Controllers
         public async Task<IActionResult> UpdateTrip(int id, [FromBody] Trip trip)
         {
             if (id != trip.Id)
-                return BadRequest("Trip ID mismatch."); // Check if the ID in the URL matches the ID in the body
+                return BadRequest("Trip ID mismatch."); // checking the id and redirecting the bad request
 
-            _context.Entry(trip).State = EntityState.Modified; // Mark the trip as modified
+            _context.Entry(trip).State = EntityState.Modified; // \mark the trip as modified
             try
             {
-                await _context.SaveChangesAsync(); // Save changes to the database
+                await _context.SaveChangesAsync();
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!TripExists(id)) // Check if the trip exists
+                if (!TripExists(id))
                     return NotFound();
                 throw;
             }
 
-            return NoContent(); // Return 204 No Content if the update is successful
+            return NoContent(); 
         }
 
-        // DELETE: api/trips/{id}
+        // DELETE: api/trips/{id}  => the url for the deletion
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteTrip(int id)
         {
-            var trip = await _context.Trips.FindAsync(id); // Find the trip by ID
+            var trip = await _context.Trips.FindAsync(id); // find the trip by ID
             if (trip == null)
-                return NotFound(); // Return 404 if trip not found
+                return NotFound();
 
-            _context.Trips.Remove(trip); // Remove the trip from the DbSet
-            await _context.SaveChangesAsync(); // Save changes to the database
+            _context.Trips.Remove(trip); 
+            await _context.SaveChangesAsync();
 
-            return NoContent(); // Return 204 No Content if the deletion is successful
+            return NoContent();
         }
 
-        // Helper method to check if a trip exists
         private bool TripExists(int id)
         {
-            return _context.Trips.Any(e => e.Id == id); // Check if the trip with the given ID exists
+            return _context.Trips.Any(e => e.Id == id); 
         }
     }
 }

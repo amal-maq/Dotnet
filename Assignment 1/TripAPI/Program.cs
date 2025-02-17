@@ -7,8 +7,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<TripContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))); // Use SQL Server and the connection string from appsettings.json
 
-builder.Services.AddControllers(); // Add controllers to the services
-
+builder.Services.AddControllers(); 
+// Add controllers to the services
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
