@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\AmalKumarMAQSoftware\\Desktop\\Test\\DotNet\\MyTask\\MyTask.csproj": {}
+    "C:\\Users\\AmalKumarMAQSoftware\\Desktop\\Test\\DotNet\\EventApi\\EventApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\AmalKumarMAQSoftware\\Desktop\\Test\\DotNet\\MyTask\\MyTask.csproj": {
+    "C:\\Users\\AmalKumarMAQSoftware\\Desktop\\Test\\DotNet\\EventApi\\EventApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\AmalKumarMAQSoftware\\Desktop\\Test\\DotNet\\MyTask\\MyTask.csproj",
-        "projectName": "MyTask",
-        "projectPath": "C:\\Users\\AmalKumarMAQSoftware\\Desktop\\Test\\DotNet\\MyTask\\MyTask.csproj",
+        "projectUniqueName": "C:\\Users\\AmalKumarMAQSoftware\\Desktop\\Test\\DotNet\\EventApi\\EventApi.csproj",
+        "projectName": "EventApi",
+        "projectPath": "C:\\Users\\AmalKumarMAQSoftware\\Desktop\\Test\\DotNet\\EventApi\\EventApi.csproj",
         "packagesPath": "C:\\Users\\AmalKumarMAQSoftware\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\AmalKumarMAQSoftware\\Desktop\\Test\\DotNet\\MyTask\\obj\\",
+        "outputPath": "C:\\Users\\AmalKumarMAQSoftware\\Desktop\\Test\\DotNet\\EventApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\AmalKumarMAQSoftware\\AppData\\Roaming\\NuGet\\NuGet.Config"

@@ -57,34 +57,33 @@ namespace ProductApi.Controllers
             var product = products.FirstOrDefault(p => p.Id == id);
             if (product == null)
             {
-                return NotFound();  // Return 404 if product not found
-            }
+                return NotFound();  
 
             if (updatedProduct == null || updatedProduct.Price < 0)
             {
-                return BadRequest("Invalid product data");  // Return 400 if the updated product data is invalid
+                return BadRequest("Invalid product data");  
             }
 
-            // Update product properties
+      
             product.Name = updatedProduct.Name;
             product.Description = updatedProduct.Description;
             product.Price = updatedProduct.Price;
 
-            return NoContent();  // Return 204 to indicate that the product was successfully updated
+            return NoContent(); 
         }
 
-        // DELETE: api/products/5
+    
         [HttpDelete("{id}")]
         public ActionResult DeleteProduct(int id)
         {
             var product = products.FirstOrDefault(p => p.Id == id);
             if (product == null)
             {
-                return NotFound();  // Return 404 if product not found
+                return NotFound();  
             }
 
-            products.Remove(product);  // Remove product from the list
-            return NoContent();  // Return 204 to indicate successful deletion
+            products.Remove(product);  
+            return NoContent(); 
         }
     }
 }

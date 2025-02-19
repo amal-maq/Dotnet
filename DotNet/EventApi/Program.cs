@@ -1,8 +1,9 @@
+using EventApi.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
-namespace ProductApi
+namespace EventApi
 {
     public class Program
     {
@@ -17,18 +18,20 @@ namespace ProductApi
                 {
                     webBuilder.ConfigureServices(services =>
                     {
-                      
+                        // Add controllers
                         services.AddControllers();
+                        
+                        // Register the EventService with Dependency Injection
+                        services.AddSingleton<IEventService, EventService>();
                     });
 
                     webBuilder.Configure(app =>
                     {
-                       
-                        app.UseHttpsRedirection(); 
-                        app.UseRouting();          
+                        app.UseHttpsRedirection();
+                        app.UseRouting();
                         app.UseEndpoints(endpoints =>
                         {
-                            endpoints.MapControllers(); 
+                            endpoints.MapControllers(); // Map controllers to endpoints
                         });
                     });
                 });

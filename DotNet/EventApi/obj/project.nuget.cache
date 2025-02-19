@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/ihvnzbhF5Y=",
+  "dgSpecHash": "yLtdPiOTdSs=",
   "success": true,
-  "projectFilePath": "C:\\Users\\AmalKumarMAQSoftware\\Desktop\\Test\\DotNet\\MyTask\\MyTask.csproj",
+  "projectFilePath": "C:\\Users\\AmalKumarMAQSoftware\\Desktop\\Test\\DotNet\\EventApi\\EventApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\AmalKumarMAQSoftware\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.1\\microsoft.aspnetcore.openapi.9.0.1.nupkg.sha512",
     "C:\\Users\\AmalKumarMAQSoftware\\.nuget\\packages\\microsoft.openapi\\1.6.17\\microsoft.openapi.1.6.17.nupkg.sha512"
